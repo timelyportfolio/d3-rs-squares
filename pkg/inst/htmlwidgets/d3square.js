@@ -20,16 +20,9 @@ HTMLWidgets.widget({
           d.d = d3.timeParse('%Y-%m-%d')(d.d);
         });
           
-        var svg = d3.select(el).selectAll('svg')
+        d3.select(el)
           .data([data]);
-          
-        svg = svg.merge(
-          svg.enter().append('svg')
-        );
-        
-        svg
-          .style('width', width)
-          .style('height', height);
+
           
         var calendar = d3_rs_squares.html()
           .width(width)
@@ -45,7 +38,12 @@ HTMLWidgets.widget({
           });
         }
           
-        svg.call(calendar);
+        d3.select(el).call(calendar);
+        
+        // make svg 100% width
+        d3.select(el).select('svg')
+          .attr('width', '')
+          .style('width', '100%');
         
         instance.calendar = calendar;
       },
