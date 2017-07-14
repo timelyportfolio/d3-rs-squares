@@ -7,6 +7,7 @@ import { timeFormat,
 } from 'd3-time-format';
 import { sum, extent, max, min, range } from 'd3-array';
 import { nest} from 'd3-collection';
+import { timeParse } from 'd3-time-format';
 import {
   timeSecond, timeSeconds,
   timeMinute, timeMinutes,
@@ -104,7 +105,7 @@ export default function chart(id) {
       nice = true,
       minDate = null,
       maxDate = null,
-      D = d => new Date(d),
+      D = d => timeParse('%Y-%m-%d')(d) || new Date(d),
       DT = d => D(d).getTime(),
       dayWeekNum = d => D(d).getDay(),
       dayMonthNum = d => D(d).getDate(),
