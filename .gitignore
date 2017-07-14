@@ -3,3 +3,5 @@ build/
 distribution/
 node_modules
 npm-debug.log
+.Rproj.user
+.Rhistory

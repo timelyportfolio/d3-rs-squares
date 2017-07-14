@@ -1,0 +1,9 @@
+ dependencies:
+  - name: d3
+    version: 4.9.1
+    src: htmlwidgets/src/d3/dist
+    script: d3.min.js
+  - name: d3-rs-squares
+    version: 0.8.0
+    src: htmlwidgets/src/d3-rs-squares/dist
+    script: d3-rs-squares.min.js
