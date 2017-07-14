@@ -54,6 +54,7 @@ var task = {};
 gulp.task('clean', () => del([ 'distribution/**' ]));  
 
 gulp.task('umd', task.umd = () => {  
+  console.log(globalMap);
   return rollup({
             moduleName: outputFilename.replace(/-/g, '_'),
             globals: globalMap,

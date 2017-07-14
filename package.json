@@ -23,7 +23,7 @@
   },
   "scripts": {
     "serve": "gulp -o d3-rs-squares -g d3-selection serve",
-    "build": "gulp -o d3-rs-squares -g d3-selection build",
+    "build": "gulp -o d3-rs-squares -g d3-array -g d3-axis -g d3-collection -g d3-scale -g d3-time -g d3-time-format -g d3-selection build",
     "pretest": "(npm outdated || true) && npm run build",
     "test": "tape 'test/**/*-test.js' && eslint index.js src",
     "prepublish": "npm run build"
