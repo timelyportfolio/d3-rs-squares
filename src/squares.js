@@ -516,7 +516,8 @@ export default function chart(id) {
 
       let elmS = rootG.select(_impl.self());
       if (elmS.empty()) {
-        elmS = rootG.append('g').attr('class', classed).attr('id', id);
+        elmS = rootG.append('g').attr('class', classed);
+        //.attr('id', id);
       }
 
       let column = elmS.selectAll('g.column').data(data, columnId);
@@ -524,7 +525,7 @@ export default function chart(id) {
       column = column.enter()
           .append('g')
           .attr('class', 'column')
-          .attr('id', columnId)
+          //.attr('id', columnId)
           .attr('transform', (_,i) => translate( animationDirection*(_inset.left + (++i * cellSize)+width), _inset.top + DEFAULT_AXIS_PADDING))
         .merge(column);
 
@@ -636,12 +637,12 @@ export default function chart(id) {
   _impl.id = function() { return id; };
   
   _impl.defaultStyle = () => `
-                  ${fonts.variable.cssImport}
-                  ${fonts.fixed.cssImport}  
+                  //${fonts.variable.cssImport}
+                  //${fonts.fixed.cssImport}  
 
                   ${_impl.self()} text { 
-                                        font-family: ${fonts.fixed.family};
-                                        font-size: ${fonts.fixed.sizeForWidth(width)};
+                                        //font-family: ${fonts.fixed.family};
+                                        //font-size: ${fonts.fixed.sizeForWidth(width)};
                                         font-weight: ${fonts.fixed.weightMonochrome}; 
                                         fill: ${display[theme].text}; 
                                       }
