@@ -49,7 +49,7 @@ HTMLWidgets.widget({
         
         // make svg 100% width
         d3.select(el).select('svg')
-          .attr('width', '')
+          .attr('width', null)
           .style('width', '100%');
         
         instance.calendar = calendar;

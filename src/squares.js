@@ -40,7 +40,7 @@ import {
 } from 'd3-time';
 import { scaleQuantize, scaleTime } from 'd3-scale';
 // import { axisBottom, axisLeft, axisRight, axisTop } from 'd3-axis';
-import { html as svg } from '@redsift/d3-rs-svg';
+import { default as svg } from './svg.js';
 // import { units, time } from '@redsift/d3-rs-intl';
 import { 
   presentation10,
