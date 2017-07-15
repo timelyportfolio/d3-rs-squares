@@ -53,11 +53,12 @@ HTMLWidgets.widget({
           .style('width', '100%');
         
         instance.calendar = calendar;
+        instance.x = x;
       },
 
       resize: function(width, height) {
 
-        // TODO: code to re-render the widget with a new size
+        this.renderValue(instance.x);
 
       },
       
