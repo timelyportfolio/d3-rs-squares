@@ -1,6 +1,6 @@
 HTMLWidgets.widget({
 
-  name: 'd3square',
+  name: 'd3cal',
 
   type: 'output',
 

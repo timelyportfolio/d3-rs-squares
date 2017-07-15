@@ -5,7 +5,7 @@
 #' @import htmlwidgets
 #'
 #' @export
-d3square <- function(
+d3cal <- function(
   data = NULL,
   width = NULL, height = NULL,
   elementId = NULL
@@ -18,7 +18,7 @@ d3square <- function(
 
   # create widget
   htmlwidgets::createWidget(
-    name = 'd3square',
+    name = 'd3cal',
     x,
     width = width,
     height = height,
@@ -27,30 +27,30 @@ d3square <- function(
   )
 }
 
-#' Shiny bindings for d3square
+#' Shiny bindings for d3cal
 #'
-#' Output and render functions for using d3square within Shiny
+#' Output and render functions for using d3cal within Shiny
 #' applications and interactive Rmd documents.
 #'
 #' @param outputId output variable to read from
 #' @param width,height Must be a valid CSS unit (like \code{'100\%'},
 #'   \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
 #'   string and have \code{'px'} appended.
-#' @param expr An expression that generates a d3square
+#' @param expr An expression that generates a d3cal
 #' @param env The environment in which to evaluate \code{expr}.
 #' @param quoted Is \code{expr} a quoted expression (with \code{quote()})? This
 #'   is useful if you want to save an expression in a variable.
 #'
-#' @name d3square-shiny
+#' @name d3cal-shiny
 #'
 #' @export
-d3squareOutput <- function(outputId, width = '100%', height = '400px'){
-  htmlwidgets::shinyWidgetOutput(outputId, 'd3square', width, height, package = 'd3squareR')
+d3calOutput <- function(outputId, width = '100%', height = '400px'){
+  htmlwidgets::shinyWidgetOutput(outputId, 'd3cal', width, height, package = 'd3squareR')
 }
 
-#' @rdname d3square-shiny
+#' @rdname d3cal-shiny
 #' @export
-renderd3square <- function(expr, env = parent.frame(), quoted = FALSE) {
+renderd3cal <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) } # force quoted
-  htmlwidgets::shinyRenderWidget(expr, d3squareOutput, env, quoted = TRUE)
+  htmlwidgets::shinyRenderWidget(expr, d3calOutput, env, quoted = TRUE)
 }
