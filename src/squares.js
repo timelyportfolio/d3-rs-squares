@@ -642,7 +642,7 @@ export default function chart(id) {
 
                   ${_impl.self()} text { 
                                         //font-family: ${fonts.fixed.family};
-                                        //font-size: ${fonts.fixed.sizeForWidth(width)};
+                                        font-size: ${fonts.fixed.sizeForWidth(width)};
                                         font-weight: ${fonts.fixed.weightMonochrome}; 
                                         fill: ${display[theme].text}; 
                                       }
