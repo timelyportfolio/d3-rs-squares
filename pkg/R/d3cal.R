@@ -7,13 +7,48 @@
 #' @export
 d3cal <- function(
   data = NULL,
+  classed = NULL,
+  background = NULL,
+  theme = NULL,
+  margin = NULL,
+  scale = NULL,
+  minDate = NULL,
+  maxDate = NULL,
+  color = NULL,
+  type = 'calendar.days',
+  style = NULL,
+  starting = NULL,
+  cellSize = NULL,
+  onClick = NULL,
+  monthSeparation = NULL,
+  nice = NULL,
   width = NULL, height = NULL,
   elementId = NULL
 ) {
 
   # forward options using x
   x = list(
-    data = data
+    data = data,
+    options = Filter(
+      Negate(is.null),
+      list(
+        classed = classed,
+        background = background,
+        theme = theme,
+        margin = margin,
+        scale = scale,
+        minDate = minDate,
+        maxDate = maxDate,
+        color = color,
+        type = type,
+        style = style,
+        starting = starting,
+        cellSize = cellSize,
+        onClick = onClick,
+        monthSeparation = monthSeparation,
+        nice= nice
+      )
+    )
   )
 
   # create widget

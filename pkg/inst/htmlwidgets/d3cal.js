@@ -26,8 +26,15 @@ HTMLWidgets.widget({
           
         var calendar = d3_rs_squares.html()
           .width(width)
-          .height(height)
-          .type('calendar.days');
+          .height(height);
+          
+        Object.keys(x.options).forEach(function(ky) {
+          try {
+            calendar[ky](x.options[ky]);
+          } catch(e) {
+            console.log('could not set ' + ky + ' option');
+          }
+        });
         
         // add very basic click message for Shiny
         //  really need to add argument to configure
