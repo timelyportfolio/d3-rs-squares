@@ -1,3 +1,5 @@
+# devtools::install_github("timelyportfolio/d3-rs-squares", subdir="pkg")
+
 library(d3calR)
 
 days = seq.Date(from=as.Date("2016-01-01"),to=as.Date("2016-12-31"),by="days")
