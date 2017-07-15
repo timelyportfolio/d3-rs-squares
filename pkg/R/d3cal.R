@@ -22,7 +22,7 @@ d3cal <- function(
   onClick = NULL,
   monthSeparation = NULL,
   nice = NULL,
-  width = NULL, height = NULL,
+  width = "100%", height = 200,
   elementId = NULL
 ) {
 
